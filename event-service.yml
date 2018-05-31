@@ -1,0 +1,20 @@
+security:
+  oauth2:
+    client:
+      clientId: event-service
+      clientSecret: ${EVENT_SERVICE_PASSWORD}
+      accessTokenUri: http://localhost:8084/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+spring:
+  application:
+    name: event-service
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
