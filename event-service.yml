@@ -18,3 +18,12 @@ eureka:
   client:
     region: default
     registryFetchIntervalSeconds: 5
+
+security:
+  oauth2:
+    client:
+      clientId: event-service
+      clientSecret: ${EVENT_SERVICE_PASSWORD}
+      accessTokenUri: http://localhost:8084/auth/oauth/token
+      grant-type: client_credentials
+      scope: server
